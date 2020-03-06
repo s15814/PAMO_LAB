@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">BMI Calculator</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="heightInput">Insert height</string>
+    <string name="weightInput">Insert weight</string>
+    <string name="calculateButtonText">Calculate</string>
+    <string name="resultViewText">TextView</string>
+    <string name="heightTip">Height [cm] :</string>
+    <string name="weightTip">Weight [kg] :</string>
+    <string name="invalidInputText">Input values can\'t be zeroes</string>
+    <string name="incorrectValueText">Please enter correct values</string>
+</resources>
