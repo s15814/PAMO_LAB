@@ -1,4 +1,4 @@
-package com.s15814.bmicalculator;
+package com.s15814.healthApp;
 
 import org.junit.Test;
 

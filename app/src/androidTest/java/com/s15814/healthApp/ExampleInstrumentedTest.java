@@ -1,4 +1,4 @@
-package com.s15814.bmicalculator;
+package com.s15814.healthApp;
 
 import android.content.Context;
 
@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
-        assertEquals("com.s15814.bmicalculator", appContext.getPackageName());
+        assertEquals("com.s15814.myapplication", appContext.getPackageName());
     }
 }

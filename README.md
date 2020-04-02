@@ -1,1 +1,0 @@
-# PAMO_LAB

@@ -1,13 +1,23 @@
 <resources>
-    <string name="app_name">BMI Calculator</string>
+    <string name="app_name">Health App</string>
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
-    <string name="heightInput">Insert height</string>
-    <string name="weightInput">Insert weight</string>
-    <string name="calculateButtonText">Calculate</string>
-    <string name="resultViewText">TextView</string>
-    <string name="heightTip">Height [cm] :</string>
-    <string name="weightTip">Weight [kg] :</string>
-    <string name="invalidInputText">Input values can\'t be zeroes</string>
-    <string name="incorrectValueText">Please enter correct values</string>
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="enter_height_field">Enter height</string>
+    <string name="height_hint">Height [cm]</string>
+    <string name="weightHint">Weight [kg]</string>
+    <string name="enter_weight_field">Enter weight</string>
+    <string name="bmi_calculator_button">BMI Calculator</string>
+    <string name="bmiCalculatorCalculateButton">Calculate</string>
+    <string name="backButtonText">Back</string>
+    <string name="mainMenuCalorieCalculatorButton">Calorie Calculator</string>
+    <string name="incorrectValueText">Values can\'t be zeroes</string>
+    <string name="invalidInputText">Please enter correct values</string>
+    <string name="calorie_calculator">Calorie calculator</string>
+    <string name="radio_button_description_male">Male</string>
+    <string name="radio_button_description_female">Female</string>
+    <string name="calorie_calculator_gender_tip_text">Select your gender:</string>
+    <string name="ageHint">Age [years]</string>
+    <string name="enter_age_field">Enter age</string>
 </resources>

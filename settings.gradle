@@ -1,2 +1,2 @@
-rootProject.name='BMI Calculator'
+rootProject.name='Health App'
 include ':app'
