@@ -45,7 +45,7 @@
         android:id="@+id/calorieCalculatorGenderTip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="40dp"
         android:text="@string/calorie_calculator_gender_tip_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -69,7 +69,7 @@
         android:ems="10"
         android:hint="@string/enter_weight_field"
         android:importantForAutofill="no"
-        android:inputType="number"
+        android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/calorieCalculatorWeightText" />
@@ -92,7 +92,7 @@
         android:ems="10"
         android:hint="@string/enter_height_field"
         android:importantForAutofill="no"
-        android:inputType="number"
+        android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/calorieCalculatorHeightText" />
@@ -115,7 +115,7 @@
         android:ems="10"
         android:hint="@string/enter_age_field"
         android:importantForAutofill="no"
-        android:inputType="number"
+        android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/calorieCalculatorAgeText" />

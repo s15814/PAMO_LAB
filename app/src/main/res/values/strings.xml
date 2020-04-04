@@ -20,4 +20,7 @@
     <string name="calorie_calculator_gender_tip_text">Select your gender:</string>
     <string name="ageHint">Age [years]</string>
     <string name="enter_age_field">Enter age</string>
+    <string name="quiz_button_text">Quiz</string>
+    <string name="recipe_button_text">Recipe</string>
+    <string name="chart_button_text">Chart</string>
 </resources>

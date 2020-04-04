@@ -39,6 +39,24 @@ public class MainMenu extends Fragment {
                         .navigate(R.id.action_mainMenu_to_SecondFragment);
             }
         });
+
+        view.findViewById(R.id.mainMenuRecipeButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(MainMenu.this)
+                        .navigate(R.id.action_mainMenu_to_recipe);
+            }
+        });
+
+        view.findViewById(R.id.mainMenuQuizButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(MainMenu.this)
+                        .navigate(R.id.action_mainMenu_to_quiz);
+            }
+        });
+
+
     }
 
 }

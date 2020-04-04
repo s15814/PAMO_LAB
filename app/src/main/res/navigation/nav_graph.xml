@@ -34,5 +34,28 @@
         <action
             android:id="@+id/action_mainMenu_to_SecondFragment"
             app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_mainMenu_to_quiz"
+            app:destination="@id/quiz" />
+        <action
+            android:id="@+id/action_mainMenu_to_recipe"
+            app:destination="@id/recipe" />
+    </fragment>
+    <fragment
+        android:id="@+id/quiz"
+        android:name="com.s15814.healthApp.Quiz"
+        android:label="quiz"
+        tools:layout="@layout/quiz" >
+        <action
+            android:id="@+id/action_quiz_to_mainMenu"
+            app:destination="@id/mainMenu" />
+    </fragment>
+    <fragment
+        android:id="@+id/recipe"
+        android:name="com.s15814.healthApp.Recipe"
+        android:label="Recipe" >
+        <action
+            android:id="@+id/action_recipe_to_mainMenu"
+            app:destination="@id/mainMenu" />
     </fragment>
 </navigation>

@@ -5,6 +5,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -15,6 +17,8 @@ public class CalorieCalculator extends Fragment {
 
     EditText heightInput, weightInput, ageInput;
     TextView result;
+    RadioGroup buttonGroup;
+    RadioButton buttonMale, buttonFemale;
 
     @Override
     public View onCreateView(
@@ -32,6 +36,10 @@ public class CalorieCalculator extends Fragment {
         weightInput = (EditText) view.findViewById(R.id.calorieCalculatorWeightInput);
         ageInput = (EditText) view.findViewById(R.id.calorieCalculatorAgeInput);
         result = (TextView) view.findViewById(R.id.calorieCalculatorResultText);
+        buttonGroup = (RadioGroup) view.findViewById(R.id.calorieCalculatorGenderGroup);
+        buttonMale = (RadioButton) view.findViewById(R.id.calorieCalculatorMaleRadioButton);
+        buttonFemale = (RadioButton) view.findViewById(R.id.calorieCalculatorFemaleRadioButton);
+
 
 
         view.findViewById(R.id.calorieCalculatorCalculateButton).setOnClickListener(new View.OnClickListener() {
@@ -51,7 +59,18 @@ public class CalorieCalculator extends Fragment {
     }
 
     private void calculateCalories() {
-        result.setText("Result");
-
+        String heightStr = heightInput.getText().toString();
+        String weightStr = weightInput.getText().toString();
+        String ageStr = ageInput.getText().toString();
+        int selectedField = this.buttonGroup.indexOfChild(
+                getView().findViewById(this.buttonGroup.getCheckedRadioButtonId())
+        );
+        if (selectedField == 1) {
+            double recommendedCalories = 655.1 + (9.563 * Double.parseDouble(weightStr)) + (1.85 * Double.parseDouble(heightStr)) - (4.676 * Double.parseDouble(ageStr));
+            result.setText("Recommended calories: " + recommendedCalories);
+        } else {
+            double recommendedCalories = 66.5 + (13.75 * Double.parseDouble(weightStr)) + (5.003 * Double.parseDouble(heightStr)) - (6.775 * Double.parseDouble(ageStr));
+            result.setText("Recommended calories: " + recommendedCalories);
+        }
     }
 }
