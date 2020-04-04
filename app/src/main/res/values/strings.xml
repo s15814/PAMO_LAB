@@ -23,4 +23,7 @@
     <string name="quiz_button_text">Quiz</string>
     <string name="recipe_button_text">Recipe</string>
     <string name="chart_button_text">Chart</string>
+    <string name="quiz_title_text">Quiz</string>
+    <string name="next_button_text">Next</string>
+    <string name="check_answers_button_text">Check answers</string>
 </resources>
