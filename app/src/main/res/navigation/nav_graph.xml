@@ -40,6 +40,9 @@
         <action
             android:id="@+id/action_mainMenu_to_recipe"
             app:destination="@id/recipe" />
+        <action
+            android:id="@+id/action_mainMenu_to_information"
+            app:destination="@id/information" />
     </fragment>
     <fragment
         android:id="@+id/quiz"
@@ -56,6 +59,15 @@
         android:label="Recipe" >
         <action
             android:id="@+id/action_recipe_to_mainMenu"
+            app:destination="@id/mainMenu" />
+    </fragment>
+    <fragment
+        android:id="@+id/information"
+        android:name="com.s15814.healthApp.Information"
+        android:label="information"
+        tools:layout="@layout/information" >
+        <action
+            android:id="@+id/action_information_to_mainMenu"
             app:destination="@id/mainMenu" />
     </fragment>
 </navigation>

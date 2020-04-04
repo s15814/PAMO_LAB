@@ -56,7 +56,13 @@ public class MainMenu extends Fragment {
             }
         });
 
-
+        view.findViewById(R.id.mainMenuChartButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(MainMenu.this)
+                        .navigate(R.id.action_mainMenu_to_information);
+            }
+        });
     }
 
 }
