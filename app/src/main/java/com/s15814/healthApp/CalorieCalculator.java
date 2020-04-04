@@ -13,6 +13,8 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
+import java.text.DecimalFormat;
+
 public class CalorieCalculator extends Fragment {
 
     EditText heightInput, weightInput, ageInput;
@@ -41,7 +43,6 @@ public class CalorieCalculator extends Fragment {
         buttonFemale = (RadioButton) view.findViewById(R.id.calorieCalculatorFemaleRadioButton);
 
 
-
         view.findViewById(R.id.calorieCalculatorCalculateButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -62,15 +63,23 @@ public class CalorieCalculator extends Fragment {
         String heightStr = heightInput.getText().toString();
         String weightStr = weightInput.getText().toString();
         String ageStr = ageInput.getText().toString();
-        int selectedField = this.buttonGroup.indexOfChild(
+
+        DecimalFormat df = new DecimalFormat("##.##");
+
+        int selectedButton = this.buttonGroup.indexOfChild(
                 getView().findViewById(this.buttonGroup.getCheckedRadioButtonId())
         );
-        if (selectedField == 1) {
-            double recommendedCalories = 655.1 + (9.563 * Double.parseDouble(weightStr)) + (1.85 * Double.parseDouble(heightStr)) - (4.676 * Double.parseDouble(ageStr));
-            result.setText("Recommended calories: " + recommendedCalories);
+
+        if (!heightStr.isEmpty() && !weightStr.isEmpty() && !ageStr.isEmpty()) {
+            if (selectedButton == 1) {
+                double recommendedCalories = 655.1 + (9.563 * Double.parseDouble(weightStr)) + (1.85 * Double.parseDouble(heightStr)) - (4.676 * Double.parseDouble(ageStr));
+                result.setText("Recommended calories: " + Double.parseDouble(df.format(recommendedCalories)));
+            } else {
+                double recommendedCalories = 66.5 + (13.75 * Double.parseDouble(weightStr)) + (5.003 * Double.parseDouble(heightStr)) - (6.775 * Double.parseDouble(ageStr));
+                result.setText("Recommended calories: " + Double.parseDouble(df.format(recommendedCalories)));
+            }
         } else {
-            double recommendedCalories = 66.5 + (13.75 * Double.parseDouble(weightStr)) + (5.003 * Double.parseDouble(heightStr)) - (6.775 * Double.parseDouble(ageStr));
-            result.setText("Recommended calories: " + recommendedCalories);
+            result.setText("Please enter all the values.");
         }
     }
 }
