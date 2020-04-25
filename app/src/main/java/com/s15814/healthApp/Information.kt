@@ -8,7 +8,7 @@ import android.webkit.WebView
 import androidx.fragment.app.Fragment
 
 class Information : Fragment() {
-    var myWebView: WebView? = null
+    private var myWebView: WebView? = null
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
             savedInstanceState: Bundle?
